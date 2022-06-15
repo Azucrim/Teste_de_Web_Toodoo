@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+.item1 { grid-area: header; }
+.item2 { grid-area: menu; }
+.item3 { grid-area: main; }
+.item4 { grid-area: right; }
+.item5 { grid-area: footer; }
+
+.container {
+  max-width: 1200px;
+
+  display: grid;
+
+  margin: 0 auto;
+
+  grid-template-areas:
+    'header header header header header header'
+    'menu main main main right right'
+    'footer footer footer footer footer footer';
+  gap: 10px;
+  background-color: indianred;
+  padding: 10px;
+}
+
+.container > div {
+  background-color: rgba(255, 255, 255, 0.8);
+  text-align: center;
+  padding: 20px 0;
+  font-size: 30px;
+}
+
+@media (max-width: 620px) {
+  .container{
+    grid-template-areas:
+    "header"
+    "menu "
+    "main "
+    "right"
+    "footer"
+  }
+}
+
+</style>
+</head>
+<body>
+
+<div class="container">
+  <div class="item1">
+    <font face="Arial" style="text-transform: uppercase; font-weight: bolder;"><h1>Teste Toodoo 15</h1></font>
+  </div>
+  <div class="item2">
+    Como jogar capturar um Pokemon
+  </div>
+  <div class="item3">
+     Tenha uma Pokebola vazia em mãos, e assim que encontrar um Pokemon arremesse a Pokebola então sua direção, em um caso de arremesso bem sucedido o Pokemon tentara sair da Pokebola 3 vezes fazendo a balançar, e caso ele falhe suas tentativas de escapar, isso quer dizer que você tem um novo companheiro. Parabéns!
+  </div>  
+  <div class="item4">
+    Dica: Em caso de dificuldades tentar enfraquecer o Pokemon antes a captura, pois aumentam suas chances de sucesso. 
+  </div>
+  <div class="item5">
+    Esta é apenas uma das etapas de sua jornada, então não pare por aqui e siga em frente.
+  </div>
+</div>
+
+</body>
+</html>
